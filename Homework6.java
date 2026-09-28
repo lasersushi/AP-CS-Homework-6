@@ -18,7 +18,8 @@ public class Homework6 {
             consOne = 0; // Reset loop counts
             for (int i = 0; i < line.length(); i++) {
                 String result = line.substring(i, i + 1);
-                boolean isLetter = Character.isLetter(line.charAt(i));      // Checks if character is a letter, if not than ignored by code
+                boolean isLetter = Character.isLetter(line.charAt(i)); // Checks if character is a letter, if not than
+                                                                       // ignored by code
                 if (result.equalsIgnoreCase("a") || result.equalsIgnoreCase("e") || result.equalsIgnoreCase("i")
                         || result.equalsIgnoreCase("o") || result.equalsIgnoreCase("u")) {
                     vowelOne++;
@@ -42,12 +43,17 @@ public class Homework6 {
             wordCount++;
             line = input.nextLine(); // Goes to next line of loop
         }
-        String wordsFinal = wordCount + " words";
-        String vowelsFinal = vowelCount + " vowels";
-        String consFinal = consCount + " consonants";
-        //Above code defines strings for final output
-        System.out.println(wordsFinal);
-        System.out.println(vowelsFinal);
-        System.out.println(consFinal);
+        // Print totals with correct pluralization
+        System.out.println(pluralize(wordCount, "word"));
+        System.out.println(pluralize(vowelCount, "vowel"));
+        System.out.println(pluralize(consCount, "consonant"));
+    }
+
+    public static String pluralize(int count, String word) {
+        if (count == 1) {
+            return count + " " + word;
+        } else {
+            return count + " " + word + "s";
+        }
     }
 }
