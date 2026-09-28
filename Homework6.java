@@ -28,12 +28,12 @@ public class Homework6 {
                     consCount++;
                 }
             }
-            if (vowelOne > 1) {
+            if (vowelOne > 1 && vowelOne != 0) {
                 System.out.println(line + ": " + vowelOne + " vowels");
             } else {
                 System.out.println(line + ": " + vowelOne + " vowel");
             }
-            if (consOne > 1) {
+            if (consOne > 1 && consOne != 0) {
                 System.out.println(line + ": " + consOne + " consonants");
             } else {
                 System.out.println(line + ": " + consOne + " consonant");
