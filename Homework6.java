@@ -29,15 +29,15 @@ public class Homework6 {
                     consCount++;
                 }
             }
-            System.out.println(pluralize(vowelOne, "vowel"));
-            System.out.println(pluralize(consOne, "consonant"));
+            System.out.println(line + ": " + pluralize(vowelOne, "vowel"));
+            System.out.println(line + ": " + pluralize(consOne, "consonant"));
             wordCount++;
             line = input.nextLine(); // Goes to next line of loop
         }
         // Print totals with correct pluralization
-        System.out.println(pluralize(wordCount, "word"));
-        System.out.println(pluralize(vowelCount, "vowel"));
-        System.out.println(pluralize(consCount, "consonant"));
+        System.out.println(line + ": " + pluralize(wordCount, "word"));
+        System.out.println(line + ": " + pluralize(vowelCount, "vowel"));
+        System.out.println(line + ": " + pluralize(consCount, "consonant"));
     }
 
     public static String pluralize(int count, String word) {    //Pluralizes the word based on the count
