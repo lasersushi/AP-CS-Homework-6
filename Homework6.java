@@ -29,17 +29,8 @@ public class Homework6 {
                     consCount++;
                 }
             }
-            if (vowelOne > 1 && vowelOne != 0) {
-                System.out.println(line + ": " + vowelOne + " vowels");
-            } else {
-                System.out.println(line + ": " + vowelOne + " vowel");
-            }
-            if (consOne > 1 && consOne != 0) {
-                System.out.println(line + ": " + consOne + " consonants");
-            } else {
-                System.out.println(line + ": " + consOne + " consonant");
-            }
-            // Above if and else statments handle plurals
+            System.out.println(pluralize(vowelOne, "vowel"));
+            System.out.println(pluralize(consOne, "consonant"));
             wordCount++;
             line = input.nextLine(); // Goes to next line of loop
         }
@@ -49,7 +40,7 @@ public class Homework6 {
         System.out.println(pluralize(consCount, "consonant"));
     }
 
-    public static String pluralize(int count, String word) {
+    public static String pluralize(int count, String word) {    //Pluralizes the word based on the count
         if (count == 1) {
             return count + " " + word;
         } else {
