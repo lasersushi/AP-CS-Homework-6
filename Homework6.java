@@ -31,8 +31,11 @@ public class Homework6 {
             wordCount++;
             line = input.nextLine();
         }
-        System.out.println(vowelCount);
-        System.out.println(wordCount);
-        System.out.println(consCount);
+        String wordsFinal = wordCount + " words";
+        String vowelsFinal = vowelCount + " vowels";
+        String consFinal = consCount + " consonants";
+        System.out.println(wordsFinal);
+        System.out.println(vowelsFinal);
+        System.out.println(consFinal);
     }
 }
