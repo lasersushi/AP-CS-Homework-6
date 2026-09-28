@@ -35,9 +35,9 @@ public class Homework6 {
             line = input.nextLine(); // Goes to next line of loop
         }
         // Print totals with correct pluralization
-        System.out.println(line + ": " + pluralize(wordCount, "word"));
-        System.out.println(line + ": " + pluralize(vowelCount, "vowel"));
-        System.out.println(line + ": " + pluralize(consCount, "consonant"));
+        System.out.println(pluralize(wordCount, "word"));
+        System.out.println(pluralize(vowelCount, "vowel"));
+        System.out.println(pluralize(consCount, "consonant"));
     }
 
     public static String pluralize(int count, String word) {    //Pluralizes the word based on the count
