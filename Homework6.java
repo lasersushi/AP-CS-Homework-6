@@ -14,9 +14,11 @@ public class Homework6 {
         Scanner input = new Scanner(System.in);
         String line = input.nextLine();
         while (line.length() > 0) {
+            vowelOne = 0;
+            consOne = 0; // Reset loop counts
             for (int i = 0; i < line.length(); i++) {
                 String result = line.substring(i, i + 1);
-                boolean isLetter = Character.isLetter(line.charAt(i));
+                boolean isLetter = Character.isLetter(line.charAt(i));      // Checks if character is a letter, if not than ignored by code
                 if (result.equalsIgnoreCase("a") || result.equalsIgnoreCase("e") || result.equalsIgnoreCase("i")
                         || result.equalsIgnoreCase("o") || result.equalsIgnoreCase("u")) {
                     vowelOne++;
@@ -27,21 +29,23 @@ public class Homework6 {
                 }
             }
             if (vowelOne > 1) {
-            System.out.println(line + ": " + vowelOne + " vowels");
+                System.out.println(line + ": " + vowelOne + " vowels");
             } else {
                 System.out.println(line + ": " + vowelOne + " vowel");
             }
             if (consOne > 1) {
-            System.out.println(line + ": " + consOne + " consonants");
+                System.out.println(line + ": " + consOne + " consonants");
             } else {
                 System.out.println(line + ": " + consOne + " consonant");
             }
+            // Above if and else statments handle plurals
             wordCount++;
-            line = input.nextLine();
+            line = input.nextLine(); // Goes to next line of loop
         }
         String wordsFinal = wordCount + " words";
         String vowelsFinal = vowelCount + " vowels";
         String consFinal = consCount + " consonants";
+        //Above code defines strings for final output
         System.out.println(wordsFinal);
         System.out.println(vowelsFinal);
         System.out.println(consFinal);
