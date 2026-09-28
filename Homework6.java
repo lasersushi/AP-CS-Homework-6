@@ -31,5 +31,8 @@ public class Homework6 {
             wordCount++;
             line = input.nextLine();
         }
+        System.out.println(vowelCount);
+        System.out.println(wordCount);
+        System.out.println(consCount);
     }
 }
